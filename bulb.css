@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bgcolor: #222;
+    --bulbbgcolor: #444;
+    --bulbtipcolor: black;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bgcolor);
+}
+
+.bulb {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: var(--bulbbgcolor);
+    border-radius: 50%;
+}
+
+
+.bulb::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 22.5px;
+    width: 35px;
+    height: 80px;
+    background: var(--bulbbgcolor);
+    border-top: 30px solid var(--bulbtipcolor);
+    border-radius: 10px;
+}
+
+
+.wires{
+    position: absolute;
+    top:0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 5px;
+    height: 50vh;
+    background: var(--bulbtipcolor);
+    border-radius: 10px;
+}
+
+
+.switchout{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 50px;
+    height: 50px;
+    background: var(--bulbtipcolor);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+}  
+
+
+.lighton{
+    background: radial-gradient(rgb(255, 145, 0), rgb(255, 255, 171));
+}
+
+.lighton .bulb{
+    background: rgb(255, 255, 102);
+}
+.lighton .bulb::before{
+    background: rgb(255, 255, 102);
+    border-top: 30px solid #555;
+}
+.lighton .bulb::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(#eaff00, #aaa);
+    border-radius: 50%;
+    filter: blur(70px);
+}

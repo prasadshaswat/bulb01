@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb</title>
+    <link rel="stylesheet" href="bulb.css">
+    <link rel="stylesheet" href="switch.css">
+</head>
+<body>
+    <audio src="click.mp3" type="audio/mp3" id="clickaudio" ></audio>
+
+    <div class="light">
+        <div class="wires"></div>
+        <div class="bulb"></div>
+
+        <div class="switchout">
+            <div class="container">
+                <input hidden="" id="check" name="check" type="checkbox">
+                <label class="toggle" for="check">
+                    <div class="toggle__circle"></div>
+                </label>
+                <div class="toggle-text">
+                    <span>N</span>
+                    <span>F</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="bulb.js"></script>
+</body>
+</html>
